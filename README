@@ -1,3 +1,12 @@
+== Welcome to MyRails
+
+* Create a new Rails Project in RubyMine
+* Once satisfied, "Version Control" -> "Git Init" with the selected project
+* After init, "Version Control" -> "Show Changes View"
+* "Unversioned Files" -> "Add to VCS"
+* "Default" -> "Commit" & "Push"
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 
