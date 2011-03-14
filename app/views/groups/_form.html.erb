@@ -1,0 +1,18 @@
+<%= f.error_messages %>
+
+<label>
+  <span>
+    <%= f.label :name %>
+  </span>
+  <%= f.text_field :name, :class=>'input_text' %>
+</label>
+
+<div id='person_children'>
+  <% f.fields_for :people do |person_form| %>
+    <%= render :partial => 'person', :locals => { :f => person_form } %>
+  <% end %>
+</div>
+
+<label>
+  <%= add_child_link 'Add Person', 'person', f %>
+</label>

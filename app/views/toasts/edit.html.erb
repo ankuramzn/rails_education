@@ -1,0 +1,16 @@
+<h1>Editing toast</h1>
+
+<% form_for(@toast) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bread %><br />
+    <%= f.text_field :bread %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @toast %> |
+<%= link_to 'Back', toasts_path %>

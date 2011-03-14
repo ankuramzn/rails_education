@@ -1,0 +1,20 @@
+<p>
+  <b>Name:</b>
+  <%=h @group.name %>
+</p>
+
+<% @group.people.each do |person| %>
+  <div class="child">
+    <p>
+      <b>Person Name:</b>
+      <%=h person.name %>
+    </p>
+    <p>
+      <b>Person Photo file:</b>
+      <%=h person.photo_file %>
+    </p>
+  </div>
+<% end %>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

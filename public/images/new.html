@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Documents: new</title>
+  
+  <link href="new_files/uploadify.css" media="screen" rel="stylesheet" type="text/css">
+<link href="new_files/scaffold.css" media="screen" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="new_files/jquery.js"></script>
+  <script type="text/javascript" src="new_files/jquery.txt"></script>
+
+
+  <script src="new_files/application.js" type="text/javascript"></script>
+<script src="new_files/swfobject.js" type="text/javascript"></script>
+<script src="new_files/jquery_002.js" type="text/javascript"></script>
+
+<style media="screen" type="text/css">#document_file_uploadUploader {visibility:hidden}</style></head><body>
+
+<p style="color: green;"></p>
+
+<h1>New document</h1>
+
+
+<div id="create_form">
+
+
+<form action="/documents" class="new_document" id="new_document" method="post">
+  
+
+  <p>
+    <label for="document_name">Name</label><br>
+    <input id="document_name" name="document[name]" size="30" type="text">
+  </p>
+  <p>
+    <label for="document_file_name">File name</label><br>
+    <input value="Hi There" class="a" id="document_file_name" name="document[file_name]" size="30" type="text">
+  </p>
+
+<li style="background-color: red;" class="item-1">1</li>
+
+
+    <p>
+      Document File <br>
+      </p><li style="background-color: red;" class="item-1">2</li>
+      <input style="display: none;" id="document_file_upload" name="document_file_upload" type="file" height="30" width="120"><object style="visibility: visible;" id="document_file_uploadUploader" data="new_files/uploadify.swf" type="application/x-shockwave-flash" height="30" width="120"><param value="high" name="quality"><param value="opaque" name="wmode"><param value="sameDomain" name="allowScriptAccess"><param value="uploadifyID=document_file_upload&amp;pagepath=/documents/&amp;script=/documents/file_uploads&amp;folder=/images&amp;width=120&amp;height=30&amp;wmode=opaque&amp;method=POST&amp;queueSizeLimit=999&amp;simUploadLimit=1&amp;auto=true&amp;fileDataName=Filedata" name="flashvars"></object><div id="document_file_uploadQueue" class="uploadifyQueue"></div>
+    
+
+  <p>
+    <input id="document_submit" name="commit" value="Create" type="submit">
+  </p>
+
+</form>
+
+</div>
+
+
+<a href="http://localhost:3000/documents">Back</a>
+
+</body></html>

@@ -1,0 +1,22 @@
+<div class="child">
+  <label>
+    <span>
+        Person <%= f.label :name %>
+    </span>
+    <%= f.text_field :name, :class=>'input_text' %>    
+  </label>
+
+  <label>
+    <span>
+        Person <%= f.label :photo_file %><br />
+    </span>
+    <%= f.text_field :photo_file, :class=>'input_text' %>
+  </label>
+
+  <label>
+    <%= f.hidden_field :_destroy, :class => 'delete' %>
+    <%= remove_child_link 'remove', f %>
+  </label>
+
+
+</div>

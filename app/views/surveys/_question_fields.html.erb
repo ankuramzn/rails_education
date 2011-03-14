@@ -1,0 +1,37 @@
+<script type="text/javascript">
+
+  $('#document_file_upload_new_questions').uploadify({
+    'uploader'  : '/images/uploadify.swf',
+    'script'    : '/documents/file_uploads',
+    'cancelImg' : '/images/cancel.png',
+    'folder'    : '/images',
+    'auto'      : true,
+         'onComplete': function(event, queueID, fileObj, response, data){
+//       alert("completed uploading file: "+fileObj['name'] + " and response was " + response);
+//       var parentId = $("#"+uploaderID).parent().attr("id");
+//       $("#"+parentId).find('#'+fileFieldID).val(response);
+
+             $('#survey_questions_attributes_new_questions_content').val(response);
+   }
+  });
+        
+</script>
+
+
+<p class="fields">
+  <%= f.label :content, "Question" %><br />
+  <%= f.text_area :content, :rows => 3 %><br />
+
+
+</p>
+<p>
+   Document File <br />
+   <li class="item-1"></li>
+   <input id="document_file_upload_new_questions" name="document_file_upload" type="file" />
+ </p>
+
+<p>
+
+  <%= f.hidden_field :_destroy %>
+  <%= link_to_remove_fields "remove", f %>
+</p>

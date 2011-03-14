@@ -1,0 +1,21 @@
+<div class ='box'>
+
+  <h1>New group</h1>
+
+  <% form_for(@group) do |f| %>
+      
+        <%= render :partial => 'form', :locals => { :f => f } %>
+
+        <label>
+          <%= f.submit 'Create', :class=>'button' %>
+        </label>
+
+  <% end %>
+
+  <label>
+    <%= link_to 'Back', groups_path %>  
+  </label>
+
+  
+
+</div>

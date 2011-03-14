@@ -1,0 +1,30 @@
+<h1>New survey</h1>
+
+<% form_for(@survey) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+    <p>
+      Document File <br />
+      <li class="item-1"></li>
+      <input id="document_file_upload" name="document_file_upload" type="file" />
+    </p>    
+
+
+    <% f.fields_for :questions do |builder| %>
+      <%= render "question_fields", :f => builder %>
+    <% end %>
+
+  <p>
+    <%= link_to_add_fields "Add Q", f, :questions %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', surveys_path %>

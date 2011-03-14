@@ -1,0 +1,45 @@
+
+<script type="text/javascript">
+
+  uploaderID = 'document_file_upload';
+  fileFieldID = 'document_file_name';
+
+</script>
+
+
+<div id='create_form' class='box'>
+
+  <h1>New document</h1>
+
+
+<% form_for(@document) do |f| %>
+  <%= f.error_messages %>
+      
+  <label>
+    <span><%= f.label :name %></span>
+    <%= f.text_field :name, :class => 'input_text' %>
+  </label>
+  <label>
+    <span><%= f.label :file_name %></span>
+    <%= f.text_field :file_name, :class => 'input_text' %>
+  </label>
+
+    <label>
+      <span>Document File</span>       
+      <input id="document_file_upload" name="document_file_upload" type="file" class="button" />
+    </label>
+
+  <label>
+    <%= f.submit 'Create', :class => 'button' %>
+  </label>
+
+<% end %>
+
+</div>
+
+<div class='box'>
+  <label>
+    <%= link_to 'Back', documents_path %>  
+  </label>
+
+</div>

@@ -1,0 +1,47 @@
+<h1>New toast</h1>
+
+<% form_for(@toast, :html => { :multipart => true }) do |f| %>
+
+
+  <%= hidden_field_tag :format, 'js' %>
+
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :bread %><br />
+    <%= f.text_field :bread, :id=>'bread' %>
+  </p>
+
+
+    <p>
+      <%= label_tag :json_response_field %><br />
+      <%= text_field_tag :json_response_field, nil, :id=>'json_response_field' %>
+    </p>
+
+    <p>
+      <%= label_tag :js_response_field %><br />
+      <%= text_field_tag :js_response_field, nil, :id=>'js_response_field' %>
+    </p>
+
+    <p>
+      <%= label_tag :html_response_field %><br />
+      <%= text_field_tag :html_response_field, nil, :id=>'html_response_field' %>
+    </p>
+
+    <p>
+      <%= f.label :photo %><br />
+      <%= f.file_field :photo %>
+    </p>
+
+
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', toasts_path %>
+
+
+<div id='html_response_div'>
+  
+</div>

@@ -1,0 +1,20 @@
+<h1>Listing toasts</h1>
+
+<table>
+  <tr>
+    <th>Bread</th>
+  </tr>
+
+<% @toasts.each do |toast| %>
+  <tr>
+    <td><%=h toast.bread %></td>
+    <td><%= link_to 'Show', toast %></td>
+    <td><%= link_to 'Edit', edit_toast_path(toast) %></td>
+    <td><%= link_to 'Destroy', toast, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New toast', new_toast_path %>
