@@ -4,7 +4,10 @@
 * Once satisfied, "Version Control" -> "Git Init" with the selected project
 * After init, "Version Control" -> "Show Changes View"
 * "Unversioned Files" -> "Add to VCS"
-* "Default" -> "Commit" & "Push"
+* "Default" -> "Commit"
+* "Log onto github https://github.com/ankuramzn (Find password locally, if needed)
+* Create new Repository & retrieve Read + Write URL : git@github.com:ankuramzn/rails_education.git
+* "Version Control" -> "Git" -> "Push Changes" and use the URL for Remote
 
 
 == Welcome to Rails
