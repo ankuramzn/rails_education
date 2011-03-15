@@ -34,6 +34,21 @@ http://phongleland.wordpress.com/2010/03/18/ror-on-ec2/)
 
 THE ONLY THING NOT WORKING AFTER THIS SHOULD BE THE S3 BACKUPS AS S3.YML HAS NOT BEEN ADDED.
 
+REFERENCES
+MOST IMPORTANT - http://phongleland.wordpress.com/2010/03/18/ror-on-ec2/
+
+http://ec2onrails.rubyforge.org/
+http://www.jonathanspooner.com/web-development/deploying-a-rails-app-to-amazon-ec2-with-capistrano/
+http://www-cs-students.stanford.edu/~silver/ec2.html
+http://kumaria.blogspot.com/2008/12/rails-deployment-capistrano-github.html
+http://www.zabada.com/tutorials/deploying-a-rails-application-to-production-on-amazon-ec2.php
+http://blog.bhushangahire.net/2010/02/17/setup-capistrano-to-deploy-rails-application-on-amazon-ec2-with-git/
+
+== FUTURE
+http://rorramblings.blogspot.com/search/label/rails?max-results=100
+
+== NOT USED
+* Upgrade ruby version - http://samneang-ngeth.blogspot.com/2009/08/update-ruby-to-version-187-in-ubuntu.html
 
 == Welcome to Rails
 
