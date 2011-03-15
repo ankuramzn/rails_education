@@ -13,7 +13,7 @@ role :web, "ec2-50-16-175-141.compute-1.amazonaws.com"                          
 role :app, "ec2-50-16-175-141.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
 role :db,  "ec2-50-16-175-141.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
 
-set :rails_env, "development"
+set :rails_env, "production"
 
 set :ec2onrails_config, {
 
