@@ -19,13 +19,20 @@
 * Working Directory: local RAILS_ROOT dir
 * "Unversioned Files" -> "Add to VCS" (Capfile and deploy.rb)
 * "File" -> "Settings" -> "Gem Environment" -> "Attach Gem" -> "ec2onrails"
-* Open Capfile and add to bottom "require 'ec2onrails/recipes'"
+* Open Capfile and add to bottom "require 'ec2onrails/recipes'", and look at the sample file in this codebase for what to delete.
 
 == Launching a AMI to support the Rails App
-* Launch Elastifox and select ami - 'ami-1951be70'
+* Launch Elastifox and select ami - 'ami-5394733a' (http://ec2onrails.rubyforge.org/,
+http://phongleland.wordpress.com/2010/03/18/ror-on-ec2/)
 * Launch an instance with Security Group - default and Key Pair ec2-keypair from the desktop (can be edited and regenerated)
+* Connect to the instance, and upgrade rails version and rubygems (http://docs.rubygems.org/read/chapter/3#page13)
+* localhost$ scp -i /Users/saksena/Desktop/ec2-keypair rubygems-1.3.6.tar root@50.17.140.70:/root 
+* ec2-instance$ tar xvf rubygems-1.3.6.tar; cd rubygems-1.3.6; ruby setup.rb; gem install -v=2.3.5 rails
+* Check versions ruby -  1.8.6 (2007-09-24 patchlevel 111) [i486-linux], rails - 2.3.5, gem - 1.3.6
+* Update the config/deploy.rb of project to add the ec2-instance's public dns name
+* from app's dir localhost$ cap ec2onrails:server:set_roles; cap ec2onrails:setup; cap deploy:cold
 
-
+THE ONLY THING NOT WORKING AFTER THIS SHOULD BE THE S3 BACKUPS AS S3.YML HAS NOT BEEN ADDED.
 
 
 == Welcome to Rails

@@ -9,9 +9,9 @@ set :deploy_via, :copy
 ssh_options[:keys] = ["#{ENV['HOME']}/.ec2/ec2-keypair"]
 
 
-role :web, "ec2-50-16-175-141.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
-role :app, "ec2-50-16-175-141.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
-role :db,  "ec2-50-16-175-141.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
+role :web, "ec2-50-17-140-70.compute-1.amazonaws.com"                          # Your HTTP server, Apache/etc
+role :app, "ec2-50-17-140-70.compute-1.amazonaws.com"                          # This may be the same as your `Web` server
+role :db,  "ec2-50-17-140-70.compute-1.amazonaws.com", :primary => true # This is where Rails migrations will run
 
 set :rails_env, "production"
 
