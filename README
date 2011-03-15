@@ -1,5 +1,7 @@
 == Welcome to MyRails
 
+== Adding project to Git Repository
+
 * Create a new Rails Project in RubyMine
 * Once satisfied, "Version Control" -> "Git Init" with the selected project
 * After init, "Version Control" -> "Show Changes View"
@@ -8,6 +10,22 @@
 * "Log onto github https://github.com/ankuramzn (Find password locally, if needed)
 * Create new Repository & retrieve Read + Write URL : git@github.com:ankuramzn/rails_education.git
 * "Version Control" -> "Git" -> "Push Changes" and use the URL for Remote
+
+== Capistrano to deploy on ec2
+
+* In RubyMine "Run" -> "Edit Configuration" -> add a new Ruby script entry with the following parameters:
+* Ruby Script: /usr/bin/capify
+* Script Arguments: .
+* Working Directory: local RAILS_ROOT dir
+* "Unversioned Files" -> "Add to VCS" (Capfile and deploy.rb)
+* "File" -> "Settings" -> "Gem Environment" -> "Attach Gem" -> "ec2onrails"
+* Open Capfile and add to bottom "require 'ec2onrails/recipes'"
+
+== Launching a AMI to support the Rails App
+* Launch Elastifox and select ami - 'ami-1951be70'
+* Launch an instance with Security Group - default and Key Pair ec2-keypair from the desktop (can be edited and regenerated)
+
+
 
 
 == Welcome to Rails
