@@ -60,7 +60,7 @@ $(document).ready(function() {
      }
     });
 
-
+    // http://www.michaelhamrah.com/blog/2008/12/event-pooling-with-jquery-using-bind-and-trigger-managing-complex-javascript/
     $(document).bind('FILE_UPLOADED', function(response) {
         alert('File Uploaded ' +  response);
     });
